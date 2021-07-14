@@ -129,3 +129,50 @@ color: white;
     padding-top: 10px;
     padding-right: 10px;
 }
+
+/* Highlights Section */
+.highlights .half-width{
+    padding-left: 156px;
+    width: 35%;
+}
+.highlight-container{
+    color: black;
+    font-weight: 700;
+    font-size: 48px;
+    padding-top: 80px;
+}
+.highlight-button{
+    background-color: #E02C6D;;
+    text-decoration: none;
+    color: whitesmoke;
+    padding: 10px;
+    width: 100px;
+    height: 24px;
+    text-align: center;
+}
+
+/* footer Section */
+footer img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+.icons{
+    display: flex;
+    justify-content: center;
+    
+}
+.icon{
+    background-color: lightgray;
+    border-radius: 25px;
+    padding: 2px;
+}
+.icon a{
+    padding: 5px;
+    color: #969BAB;
+   
+}
+footer p{
+    text-align: center;
+}
