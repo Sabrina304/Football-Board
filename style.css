@@ -53,10 +53,15 @@ nav li a{
 header{
     background-color: #2D25A0;
     height: 677px;
-   
+   animation-name: header;
+   animation-duration: 10s;
     
 }
-
+/* Animation Added */ 
+@keyframes header{
+    from{background-color: #2D25A0 ;}
+    to{background-color: darkcyan;}
+}
 .container{
     display: flex;
     margin-bottom: 150px;
@@ -69,7 +74,15 @@ header{
 .half-width img{
     padding-top: 70px;
     width: 100%;
-    transition: width 2s;
+    
+}
+/* Transition Added */ 
+.banner img{
+    transition: width 1s;
+}
+.banner img:hover{
+    width: 500px;
+   
 }
 
 
@@ -81,11 +94,8 @@ color: white;
 
 }
 
-/* Transition Added */
-.half-width img:hover{
-    width: 300px;
-   
-}
+
+
 .live-button{
     background-color: #E02C6D;;
     text-decoration: none;
@@ -106,7 +116,7 @@ color: white;
     grid-row-gap:30px;
     grid-column-gap:27px;
     padding-top:70px;
-  
+  padding-bottom: 100px;
    
    
 
@@ -121,7 +131,7 @@ color: white;
     padding-right:20px;
     text-align:left;
      background: #FFFFFF;
-      box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.20);
 }
     
 .player img{
@@ -151,6 +161,60 @@ color: white;
     text-align: center;
 }
 
+
+/*news Section */
+.trend-news{
+    font-size: 40px;
+    position: relative;
+    animation: trendy 10s infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes trendy {
+    from{left:0px;}               /* Animation Added */ 
+    to{left: 1000px;}
+}
+.news-highlight{
+    display:grid;
+    justify-content: center;
+    padding-left:10px;
+    padding-right:10px;
+    grid-template-columns: repeat(4,1fr);
+    grid-row-gap:20px;
+    grid-column-gap:20px;
+    padding-top:70px;
+  
+}
+
+.news-frame{
+   
+    border-radius: 2px solid blue;
+    position: relative;
+    padding-bottom: 100px;
+}
+
+.photo img{
+    border-radius: 2px;
+    width: 100%;
+    height: 200px;
+}
+.news-detail{
+    display: none;
+    position: absolute;
+    top:0;
+}
+.news-detail h3{
+  
+    background-color:navy;
+    color: white;
+    text-align: center;
+}
+
+.news-frame:hover .news-detail{
+    display: block;
+    background-color: rgba(211, 211, 211, 0.5);
+}
+
 /* footer Section */
 footer img{
     display: block;
@@ -175,4 +239,35 @@ footer img{
 }
 footer p{
     text-align: center;
+}
+
+
+ /* ------Responsiveness------------ */
+
+/* Mobile devices */
+
+@media only screen and(max-width:688px) {
+   .half-width{
+       width: 100%;
+   }
+   
+    .players{
+        grid-template-columns: repeat(1,1fr);
+    }
+    nav,.live-watch,.player,.news-highlight{
+        flex-direction: column;
+    }
+    
+}
+
+
+/* Tablet devices */
+@media only screen and (min-width:688px) and (max-width:992px){
+    .players,.news-highlight{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .player{
+        flex-direction: column;
+    }
+   
 }
